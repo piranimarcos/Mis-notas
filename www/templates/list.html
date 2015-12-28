@@ -1,15 +1,16 @@
 <ion-view view-title="Mis Notas">
 	<ion-content ng-controller="ListController">
 		<ion-list>
-			  <ion-item class="item-remove-animate" href="/#/edit/{{nota.id}}" ng-repeat="nota in notas">
+			  <ion-item class="item-remove-animate item-icon-right" href="/#/edit/{{nota.id}}" ng-repeat="nota in notas">
+						<i class="icon ion-ios-arrow-forward"></i>
 				    <h2>{{nota.title}}</h2>
 				    <p>{{nota.descripcion}}</p>
 
-				    <ion-option-button class="button-assertive" ng-click="remove(nota.id)">Eliminar</ion-option-button>
+				    <ion-option-button class="button-assertive icon-left ion-android-delete" ng-click="remove(nota.id)">Eliminar</ion-option-button>
 			  </ion-item>
 		</ion-list>
-		<div class="padding">
-			<a href="/#/create" class="button button-block button-positive">Agregar</a>
-		</div>
 	</ion-content>
+	<div class="bar bar-footer bar-stable">
+			<a href="/#/create" class="button button-positive pull-right icon-left ion-compose">Agregar</a>
+	</div>
 </ion-view>	
