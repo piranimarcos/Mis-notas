@@ -1,0 +1,21 @@
+<div>	
+	<ion-view view-title="{{titulo}}">
+		<ion-content>
+			<div class="list card">
+				<label class="item item-input item-floating-label">
+					<span class="input-label">Titulo</span>
+					<input type="text" placeholder="Titulo" ng-model="nota.title">
+				</label>
+				<label class="item item-input item-floating-label">
+					<span class="input-label">Descipcion</span>
+					<textarea placeholder="Descripcion" ng-model="nota.descripcion"></textarea>
+				</label>
+			</div>
+			<div class="list card">
+				<div class="padding">
+					<button class="button button-block button-positive" ng-click="save()">Guardar</button>
+				</div>
+			</div>
+		</ion-content>
+	</ion-view>
+</div>
