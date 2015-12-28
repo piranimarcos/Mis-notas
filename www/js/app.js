@@ -23,6 +23,10 @@
 
   app.controller('ListController', function($scope, NoteStore){
     $scope.notas = NoteStore.list();
+
+    $scope.remove = function(id){
+      NoteStore.remove(id);
+    }
   })
 
   app.controller('EditCtrl', function($scope, $state, NoteStore){
